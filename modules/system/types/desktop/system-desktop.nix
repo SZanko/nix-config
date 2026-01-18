@@ -1,0 +1,48 @@
+{ inputs
+, ...
+}:
+{
+  # expansion of cli system for desktop use
+
+  flake.modules.nixos.system-desktop = {
+    xdg.portal.enable = true;
+
+    imports = with inputs.self.modules.nixos; [
+      system-cli
+      browser
+      printing
+      gnome
+      pipewire
+      fonts
+    ];
+
+    zramSwap = {
+      enable = true;
+    };
+    services = {
+      openssh.enable = true;
+      earlyoom = {
+        enable = true;
+        freeSwapThreshold = 5;
+      };
+      udev.extraRules = ''
+      ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="22d4", ATTR{idProduct}=="1503", TEST=="power/control", ATTR{power/control}="on"
+      '';
+
+    };
+  };
+
+  flake.modules.darwin.system-desktop = {
+    imports = with inputs.self.modules.darwin; [
+      system-cli
+    ];
+  };
+
+  #flake.modules.homeManager.system-desktop = {
+  #  imports = with inputs.self.modules.homeManager; [
+  #    system-cli
+  #    browser
+  #    office
+  #  ];
+  #};
+}
