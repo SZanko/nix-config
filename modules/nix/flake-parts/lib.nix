@@ -13,20 +13,20 @@
 
   config.flake.lib = {
 
-    mkNixos = system: name: {
+    mkNixos = hostSystem: name: {
       ${name} = inputs.nixpkgs.lib.nixosSystem {
         modules = [
           inputs.self.modules.nixos.${name}
-          { nixpkgs.hostPlatform = lib.mkDefault system; }
+          { nixpkgs.hostPlatform = lib.mkDefault hostSystem; }
         ];
       };
     };
 
-    mkDarwin = system: name: {
+    mkDarwin = hostSystem: name: {
       ${name} = inputs.nix-darwin.lib.darwinSystem {
         modules = [
           inputs.self.modules.darwin.${name}
-          { nixpkgs.hostPlatform = lib.mkDefault system; }
+          { nixpkgs.hostPlatform = lib.mkDefault hostSystem; }
         ];
       };
     };
