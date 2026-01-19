@@ -18,6 +18,8 @@ in
 
       imports = with inputs.self.modules.nixos; [
         # developmentEnvironment
+        java
+        containers
       ];
 
       users.users."${username}" = {

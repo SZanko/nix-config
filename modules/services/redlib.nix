@@ -2,7 +2,7 @@
 , ...
 }:
 {
-  flake.modules.nixos.redlib = { unstable, ... }: {
+  flake.modules.nixos.redlib = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       anubis
     ];
@@ -11,7 +11,7 @@
       redlib = {
         enable = true;
         openFirewall = false;
-        package = unstable.redlib;
+        package = pkgs.unstable.redlib;
         port = 9020;
         address = "0.0.0.0";
         settings = {

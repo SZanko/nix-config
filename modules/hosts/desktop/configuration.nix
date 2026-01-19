@@ -11,6 +11,7 @@ inputs,
       nvidia-closed
       gaming
       multimedia
+      redlib
     ];
 
     # Enable networking
