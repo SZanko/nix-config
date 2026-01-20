@@ -4,7 +4,7 @@
 {
   # expansion of cli system for desktop use
 
-  flake.modules.nixos.system-desktop = {
+  flake.modules.nixos.system-desktop = { pkgs, ... }: {
     xdg.portal.enable = true;
 
     imports = with inputs.self.modules.nixos; [
@@ -14,6 +14,10 @@
       gnome
       pipewire
       fonts
+    ];
+
+    environment.systemPackages = with pkgs; [
+      wl-clipboard
     ];
 
     zramSwap = {
@@ -28,7 +32,6 @@
       udev.extraRules = ''
       ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="22d4", ATTR{idProduct}=="1503", TEST=="power/control", ATTR{power/control}="on"
       '';
-
     };
   };
 

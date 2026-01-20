@@ -29,6 +29,7 @@
 
     environment.systemPackages = [ 
       pkgs.unstable.helmfile-wrapped
+      pkgs.unstable.kubectl
       (pkgs.unstable.wrapHelm pkgs.unstable.kubernetes-helm {
         plugins = with pkgs.unstable.kubernetes-helmPlugins; [
           helm-secrets

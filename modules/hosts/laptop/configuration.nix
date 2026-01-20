@@ -2,21 +2,18 @@
 , ...
 }:
 {
-  flake.modules.nixos.desktop = {
+  flake.modules.nixos.laptop = {
     imports = with inputs.self.modules.nixos; [
       system-desktop
       systemd-boot
       bluetooth
-      nvidia-closed
-      gaming
       multimedia
-      redlib
     ];
 
     # Enable networking
     networking = {
       networkmanager.enable = true;
-      hostName = "stefan-pc"; # Define your hostname.
+      hostName = "stefan-laptop"; # Define your hostname.
       nameservers = [ 
         "9.9.9.9#dns.quad9.net"
         "149.112.112.112#dns.quad9.net"
@@ -57,6 +54,12 @@
       };
     };
 
+    boot.kernelParams = [
+      "psmouse.synaptics_intertouch=1"
+    ];
+
+
 
   };
 }
+
