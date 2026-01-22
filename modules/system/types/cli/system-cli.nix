@@ -9,6 +9,7 @@
       nix-modules-setup
       cli-tools
       systemd-resolved
+      security
       zsh
     ];
   };
