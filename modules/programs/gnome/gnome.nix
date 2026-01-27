@@ -32,7 +32,22 @@
       };
     };
 
+    environment = {
+      gnome = {
+        excludePackages = with pkgs; [
+          epiphany
+          geary
+          gnome-maps
+          gnome-calendar
+          gnome-characters
+          gnome-contacts
+          gnome-font-viewer
+        ];
+      };
+    };
+
   };
+
 
   #flake.modules.homeManager.gnome = {
   #  dconf.settings = {
