@@ -3,13 +3,7 @@
 }:
 {
   flake.modules.nixos.browser = {
-    imports = [
-      inputs.nix-flatpak.nixosModules.nix-flatpak
-    ];
-
     services.flatpak = {
-      enable = true;
-
       packages = [
         "org.mozilla.firefox"
         "io.gitlab.librewolf-community"

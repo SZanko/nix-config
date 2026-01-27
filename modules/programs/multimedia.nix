@@ -1,9 +1,7 @@
 {
-  flake.modules.nixos.multimedia = {
+  flake.modules.nixos.multimedia = { inputs, ... }: {
 
     services.flatpak = {
-      enable = true;
-
       packages = [
         "com.stremio.Stremio"
         "org.signal.Signal"

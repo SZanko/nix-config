@@ -5,7 +5,6 @@
   # expansion of cli system for desktop use
 
   flake.modules.nixos.system-desktop = { pkgs, ... }: {
-    xdg.portal.enable = true;
 
     imports = with inputs.self.modules.nixos; [
       system-cli
@@ -14,6 +13,7 @@
       gnome
       pipewire
       fonts
+      flatpak
     ];
 
     environment.systemPackages = with pkgs; [

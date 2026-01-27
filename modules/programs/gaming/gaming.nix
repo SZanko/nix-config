@@ -3,10 +3,7 @@
 }:
 {
 
-  flake.modules.nixos.gaming = {
-    imports = [
-      inputs.nix-flatpak.nixosModules.nix-flatpak
-    ];
+  flake.modules.nixos.gaming = { inputs, ... }: {
     programs = {
       joycond-cemuhook.enable = true;
     };
@@ -16,8 +13,6 @@
       joycond.enable = true;
 
       flatpak = {
-        enable = true;
-
         packages = [
           "net.lutris.Lutris"
           "com.heroicgameslauncher.hgl"

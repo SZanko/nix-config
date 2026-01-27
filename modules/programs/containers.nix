@@ -2,11 +2,7 @@
 , ...
 }:
 {
-  flake.modules.nixos.containers = { pkgs, ... }: {
-    imports = [
-      inputs.nix-flatpak.nixosModules.nix-flatpak
-    ];
-
+  flake.modules.nixos.containers = { inputs, pkgs, ... }: {
     virtualisation = {
       podman = {
         enable = true;
@@ -41,7 +37,6 @@
     ];
 
     services.flatpak = {
-      enable = true;
 
       packages = [
         "io.podman_desktop.PodmanDesktop"

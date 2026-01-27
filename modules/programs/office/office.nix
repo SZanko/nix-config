@@ -1,9 +1,6 @@
 {
-  flake.modules.nixos.office = {
-
+  flake.modules.nixos.office = { inputs, ... }: {
     services.flatpak = {
-      enable = true;
-
       packages = [
         "org.libreoffice.LibreOffice"
         "org.gimp.GIMP"

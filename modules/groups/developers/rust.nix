@@ -1,6 +1,5 @@
 {
-  flake.modules.nixos.rust = { pkgs, ... }: {
-
+  flake.modules.nixos.rust = { inputs, pkgs, ... }: {
     security.wrappers = {
       # Low-level unprivileged sandboxing tool, see <https://github.com/containers/bubblewrap>.
       bwrap = {
@@ -34,8 +33,6 @@
 
     services = {
       flatpak = {
-        enable = true;
-
         packages = [
           "com.jetbrains.RustRover"
           "runtime/org.freedesktop.Sdk.Extension.llvm21/x86_64/25.08"

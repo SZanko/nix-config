@@ -2,10 +2,7 @@
 , ...
 }:
 {
-  flake.modules.nixos.gaming = { pkgs, ...}: {
-    imports = [
-      inputs.nix-flatpak.nixosModules.nix-flatpak
-    ];
+  flake.modules.nixos.gaming = { inputs, pkgs, ...}: {
     programs = { 
       gamemode = {
         enable = true;
@@ -27,8 +24,6 @@
     };
 
     services.flatpak = {
-      enable = true;
-
       packages = [
         "com.valvesoftware.Steam"
         "io.github.Foldex.AdwSteamGtk"
