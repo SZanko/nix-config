@@ -5,8 +5,9 @@
       packages = [
         "com.stremio.Stremio"
         "org.signal.Signal"
-        "com.ktechpit.whatsie"
+        "io.github.tobagin.karere"
         "im.riot.Riot"
+        "app.grayjay.Grayjay"
       ];
 
       overrides = {

@@ -11,6 +11,7 @@
       gaming
       multimedia
       redlib
+      ipfs
       german
     ];
 

@@ -39,6 +39,7 @@ in
           "tss"
           "uucp"
           "plugdev"
+          config.services.kubo.group
         ];
 
         packages = [
