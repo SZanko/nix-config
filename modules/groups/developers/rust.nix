@@ -29,6 +29,8 @@
       espflash
       unstable.esp-generate
       unstable.probe-rs-tools
+      gcc
+      clang
     ];
 
     services = {
