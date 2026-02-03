@@ -11,6 +11,7 @@
       browser
       printing
       gnome
+      office
       pipewire
       fonts
       flatpak
