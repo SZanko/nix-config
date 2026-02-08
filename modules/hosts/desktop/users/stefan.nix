@@ -6,6 +6,7 @@
     imports = with inputs.self.modules.nixos; [
       rust
       stefan
+      guest
     ];
 
     #home-manager.users.stefan = {

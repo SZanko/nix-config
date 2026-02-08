@@ -8,11 +8,10 @@ let
 in
   {
   flake.modules.nixos."${username}" =
-    {
-    lib,
-    config,
-    pkgs,
-    ...
+    { lib
+    , config
+    , pkgs
+    , ...
     }:
     {
 
