@@ -15,6 +15,7 @@
       pipewire
       fonts
       flatpak
+      plymouth
     ];
 
     environment.systemPackages = with pkgs; [
