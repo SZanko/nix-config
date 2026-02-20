@@ -14,6 +14,7 @@
         #secrets
         #sops-nix
         firmware
+        nur
       ]
       ++ [ inputs.self.modules.generic.systemConstants ];
   };
@@ -29,6 +30,7 @@
         impermanence
         #secrets
         sops
+        nur
       ]
       ++ [ inputs.self.modules.generic.systemConstants ];
   };

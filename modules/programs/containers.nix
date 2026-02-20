@@ -36,8 +36,11 @@
       })
     ];
 
-    services.flatpak = {
+  };
 
+  flake.modules.nixos.containers-desktop = {
+
+    services.flatpak = {
       packages = [
         "io.podman_desktop.PodmanDesktop"
       ];

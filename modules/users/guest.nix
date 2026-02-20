@@ -6,6 +6,10 @@
       description = "Guest";
       password = "";
     };
+
+    systemd.tmpfiles.rules = [
+      "D! /home/guest 0700 guest users"
+    ];
   };
 
 }

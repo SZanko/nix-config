@@ -23,7 +23,7 @@
     };
     determinate = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
+      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     };
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";

@@ -17,8 +17,12 @@ in
 
       imports = with inputs.self.modules.nixos; [
         # developmentEnvironment
+        frontend
         java
         containers
+        containers-desktop
+        vmSetup
+        vmSetup-desktop
       ];
 
       users.users."${username}" = {

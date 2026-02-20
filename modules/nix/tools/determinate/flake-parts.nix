@@ -1,6 +1,5 @@
-{
-  inputs,
-  ...
+{ inputs
+, ...
 }:
 {
   # Determinate Nix is Determinate Systems' validated and secure downstream distribution of NixOS/nix.
@@ -10,7 +9,7 @@
   flake-file.inputs = {
     # Determinate 3.* module
     determinate = {
-      url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
+      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

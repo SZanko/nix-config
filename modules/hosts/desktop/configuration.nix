@@ -2,7 +2,7 @@
 , ...
 }:
 {
-  flake.modules.nixos.desktop = {
+  flake.modules.nixos.desktop = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       system-desktop
       systemd-boot
@@ -13,6 +13,7 @@
       redlib
       ipfs
       german
+      phantom-service
     ];
 
     # Enable networking
@@ -33,6 +34,10 @@
       sessionVariables = {
         QT_QPA_PLATFORM = "wayland";
       };
+
+      systemPackages =  [
+        pkgs.nur.repos.szanko.samloader
+      ];
     };
 
 

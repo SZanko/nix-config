@@ -10,12 +10,13 @@
       };
       plymouth = {
         enable = true;
-        theme = "rings";
+        theme = "dragon";
         themePackages = with pkgs; [
           # By default we would install all themes
-          (adi1090x-plymouth-themes.override {
-            selected_themes = [ "rings" ];
-          })
+          adi1090x-plymouth-themes
+          #(adi1090x-plymouth-themes.override {
+          #  selected_themes = [ "rings" ];
+          #})
         ];
       };
 

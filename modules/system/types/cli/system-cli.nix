@@ -11,6 +11,7 @@
       systemd-resolved
       security
       zsh
+      nixstore-garbage-collection
     ];
   };
 
@@ -19,6 +20,7 @@
       nix-modules-setup
       cli-tools
       zsh
+      nixstore-garbage-collection
     ];
   };
 
