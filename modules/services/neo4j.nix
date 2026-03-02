@@ -5,6 +5,9 @@
       bolt = {
         tlsLevel = "DISABLED";
       };
+      https = {
+        enable = false;
+      };
     };
 
     environment.systemPackages = with pkgs; [
