@@ -9,7 +9,7 @@
       bluetooth
       multimedia
       german
-      neo4j
+      neo4j-dev
     ];
 
     # Enable networking
