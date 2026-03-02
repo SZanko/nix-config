@@ -9,6 +9,9 @@
         daemon = {
           enable = true;
         };
+        fangfrisch = {
+          enable = true;
+        };
       };
     };
   };

@@ -31,6 +31,9 @@
       unstable.probe-rs-tools
       gcc
       clang
+      #jetbrains.rust-rover
+      slint-lsp
+      slint-viewer
     ];
 
     services = {

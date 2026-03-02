@@ -5,6 +5,7 @@ let
       environment.systemPackages = with pkgs; [
         git
         git-lfs
+        github-cli
         ncdu
         tmux
         tree
