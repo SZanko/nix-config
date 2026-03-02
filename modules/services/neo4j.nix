@@ -6,6 +6,10 @@
         tlsLevel = "DISABLED";
       };
     };
+
+    environment.systemPackages = with pkgs; [
+      neo4j-desktop
+    ];
   };
 }
 
