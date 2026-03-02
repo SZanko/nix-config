@@ -9,6 +9,7 @@
       nix-modules-setup
       cli-tools
       systemd-resolved
+      graphics
       security
       zsh
       nixstore-garbage-collection
