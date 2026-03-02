@@ -16,6 +16,7 @@
       fonts
       flatpak
       plymouth
+      antivirus
     ];
 
     environment.systemPackages = with pkgs; [
