@@ -12,6 +12,7 @@
       multimedia
       redlib
       ipfs
+      neo4j-dev
       german
       phantom-service
     ];

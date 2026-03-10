@@ -36,6 +36,14 @@
       ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="22d4", ATTR{idProduct}=="1503", TEST=="power/control", ATTR{power/control}="on"
       '';
     };
+
+    boot = {
+      kernel = {
+        sysctl = {
+          "fs.inotify.max_user_watches" = 1048576;
+        };
+      };
+    };
   };
 
   flake.modules.darwin.system-desktop = {

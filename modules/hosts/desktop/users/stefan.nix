@@ -7,6 +7,8 @@
       rust
       stefan
       guest
+      dotnet-dev
+      pentester
     ];
 
     #home-manager.users.stefan = {
