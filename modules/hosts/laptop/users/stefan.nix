@@ -7,6 +7,7 @@
       stefan
       rust
       dotnet-dev
+      arduino
     ];
 
     #home-manager.users.stefan = {
