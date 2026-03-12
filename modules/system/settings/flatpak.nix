@@ -18,6 +18,7 @@
 
     services.flatpak = {
       enable = true;
+      uninstallUnmanaged = true;
       overrides = {
         global = {
           # Force Wayland by default
