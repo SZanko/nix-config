@@ -17,6 +17,7 @@
       flatpak
       plymouth
       antivirus
+      secureboot
     ];
 
     environment.systemPackages = with pkgs; [

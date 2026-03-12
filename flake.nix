@@ -35,6 +35,10 @@
     hyprland.url = "github:hyprwm/Hyprland";
     impermanence.url = "github:nix-community/impermanence";
     import-tree.url = "github:vic/import-tree";
+    lanzaboote = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/lanzaboote/v1.0.0";
+    };
     nix-alien = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:thiagokokada/nix-alien";
