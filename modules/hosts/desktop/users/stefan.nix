@@ -9,6 +9,7 @@
       guest
       dotnet-dev
       pentester
+      arduino
     ];
 
     #home-manager.users.stefan = {

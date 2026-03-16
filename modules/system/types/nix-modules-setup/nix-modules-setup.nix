@@ -15,6 +15,7 @@
         #sops-nix
         firmware
         nur
+        nix-alien
       ]
       ++ [ inputs.self.modules.generic.systemConstants ];
   };

@@ -31,7 +31,7 @@
       unstable.probe-rs-tools
       gcc
       clang
-      #jetbrains.rust-rover
+      jetbrains.rust-rover
       slint-lsp
       slint-viewer
     ];

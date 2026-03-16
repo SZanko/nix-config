@@ -5,6 +5,7 @@
       arduino-mk
       arduino-ci
       arduino-ide
+      python3
     ];
   };
 }

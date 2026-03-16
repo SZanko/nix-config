@@ -28,6 +28,7 @@
         "com.valvesoftware.Steam"
         "io.github.Foldex.AdwSteamGtk"
         "io.github.philipk.boilr"
+        "runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/25.08"
       ];
     };
   };
