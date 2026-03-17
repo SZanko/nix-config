@@ -11,7 +11,8 @@
       redlib = {
         enable = true;
         openFirewall = false;
-        package = pkgs.unstable.redlib;
+        #package = pkgs.unstable.redlib;
+        package = pkgs.nur.repos.szanko.redlib;
         port = 9020;
         address = "0.0.0.0";
         settings = {
