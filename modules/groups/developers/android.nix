@@ -1,28 +1,16 @@
 {
-  flake.modules.nixos.java = { pkgs, ... }: {
-    programs.java = {
-      enable = true;
-      package = pkgs.jdk25;
-      binfmt = true;
-    };
-
+  flake.modules.nixos.android = { inputs, pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-      gradle
-      maven
+      android-tools
     ];
 
-    # Kotlin Profiler without Root
-    boot.kernel.sysctl = {
-      "kernel.perf_event_paranoid" = 1;
-      "kernel.kptr_restrict" = 0;
-    };
 
     services = {
       flatpak = {
         enable = true;
 
         packages = [
-          "com.jetbrains.IntelliJ-IDEA-Ultimate"
+          "com.google.AndroidStudio"
           "runtime/org.freedesktop.Sdk.Extension.openjdk25/x86_64/25.08"
           "runtime/org.freedesktop.Sdk.Extension.openjdk21/x86_64/25.08"
           "runtime/org.freedesktop.Sdk.Extension.openjdk17/x86_64/25.08"
@@ -33,7 +21,7 @@
         ];
 
         overrides = {
-          "com.jetbrains.IntelliJ-IDEA-Ultimate".Context = {
+          "com.google.AndroidStudio".Context = {
             filesystems = [
               "xdg-config/git:ro" # Expose user Git config
               "/run/current-system/sw/bin:ro" # Expose NixOS managed software
@@ -45,11 +33,13 @@
             ];
 
             Environment = [
-              "FLATPAK_ENABLE_SDK_EXT=openjdk25,node24"
+              "FLATPAK_ENABLE_SDK_EXT=openjdk25,openjdk21,openjdk17,node24"
             ];
           };
         };
+
       };
     };
+
   };
 }

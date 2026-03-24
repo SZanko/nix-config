@@ -22,6 +22,7 @@
 
     environment.systemPackages = with pkgs; [
       wl-clipboard
+      comma
     ];
 
     zramSwap = {

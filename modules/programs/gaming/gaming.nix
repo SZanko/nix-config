@@ -17,6 +17,7 @@
           "net.lutris.Lutris"
           "com.heroicgameslauncher.hgl"
           "com.modrinth.ModrinthApp"
+          "com.jaquadro.NBTExplorer"
           "io.github.limo_app.limo"
           "io.github.loot.loot"
           "io.github.spacingbat3.webcord"

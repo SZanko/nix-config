@@ -10,6 +10,7 @@
       dotnet-dev
       pentester
       arduino
+      android
     ];
 
     #home-manager.users.stefan = {
