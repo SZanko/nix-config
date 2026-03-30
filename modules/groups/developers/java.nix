@@ -9,6 +9,7 @@
     environment.systemPackages = with pkgs; [
       gradle
       maven
+      jetbrains.idea
     ];
 
     # Kotlin Profiler without Root

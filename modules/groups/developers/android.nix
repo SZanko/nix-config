@@ -4,6 +4,7 @@
       android-tools
     ];
 
+    programs.adb.enable = true;
 
     services = {
       flatpak = {

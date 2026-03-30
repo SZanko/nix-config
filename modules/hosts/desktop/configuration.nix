@@ -11,7 +11,7 @@
       gaming
       multimedia
       redlib
-      ipfs
+      #ipfs
       neo4j-dev
       german
       phantom-service
