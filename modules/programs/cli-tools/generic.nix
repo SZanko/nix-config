@@ -22,7 +22,7 @@ let
         yazi
         direnv
         pulsemixer
-        neovim
+        unstable.neovim
         difftastic
         bat
       ];

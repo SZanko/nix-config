@@ -38,6 +38,7 @@
 
       systemPackages =  [
         pkgs.nur.repos.szanko.samloader
+        pkgs.unstable.snx-rs
       ];
     };
 
