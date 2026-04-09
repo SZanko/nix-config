@@ -12,7 +12,9 @@
       gamescope = {
         enable = true;
       };
-
+      #steam = {
+      #  enable = true;
+      #};
     };
 
     services.udev.packages = with pkgs; [
@@ -29,6 +31,9 @@
         "io.github.Foldex.AdwSteamGtk"
         "io.github.philipk.boilr"
         "runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/25.08"
+        "app/org.freedesktop.Platform.VulkanInfo/x86_64/25.08"
+        "app/org.freedesktop.Platform.GlxInfo/x86_64/25.08"
+        "runtime/org.freedesktop.Platform.VAAPI.nvidia/x86_64/25.08"
       ];
     };
   };

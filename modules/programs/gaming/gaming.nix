@@ -3,10 +3,14 @@
 }:
 {
 
-  flake.modules.nixos.gaming = { inputs, ... }: {
+  flake.modules.nixos.gaming = { inputs, pkgs, ... }: {
     programs = {
       joycond-cemuhook.enable = true;
     };
+
+    environment.systemPackages =  with pkgs.unstable; [
+      #heroic
+    ];
 
     services = {
       ratbagd.enable = true;

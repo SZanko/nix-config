@@ -1,12 +1,28 @@
 {
-  flake.modules.nixos.nvidia-closed = {
+  flake.modules.nixos.nvidia-closed = {inputs, pkgs, ...}: {
     services = {
       xserver = {
         videoDrivers = ["nvidia"];
       };
+
+      flatpak = {
+        packages = [
+          "org.freedesktop.Platform.GL32.nvidia-580-142"
+        ];
+      };
     };
-    environment.sessionVariables = {
-      VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+    environment = {
+      sessionVariables = {
+        VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+      };
+
+      variables = {
+        MESA_VK_DEVICE_SELECT = "nvidia";
+      };
+
+      systemPackages = with pkgs; [
+        vulkan-tools
+      ];
     };
     hardware = {
       graphics = {

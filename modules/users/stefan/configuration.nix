@@ -21,8 +21,8 @@ in
         java
         containers
         containers-desktop
-        vmSetup
-        vmSetup-desktop
+        #vmSetup
+        #vmSetup-desktop
       ];
 
       users.users."${username}" = {
