@@ -10,6 +10,7 @@
       multimedia
       german
       neo4j-dev
+#spark-dev
     ];
 
     # Enable networking
