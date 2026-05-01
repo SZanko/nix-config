@@ -99,11 +99,11 @@
     "brew-api": {
       "flake": false,
       "locked": {
-        "lastModified": 1777548686,
-        "narHash": "sha256-7owiS1hlDb5lgjfhOFdFJSfJHpM0RxTx7TuXf2qfqmY=",
+        "lastModified": 1777591147,
+        "narHash": "sha256-VB3d0yfY/FEf/V5kLxY/B5TJxVDKk7zWAO2jbRGnH/4=",
         "owner": "BatteredBunny",
         "repo": "brew-api",
-        "rev": "b8a52ffac24a6ad1598c774136fa4d9642ada081",
+        "rev": "8e6ff06d85bbe368e133fd87c47c3c27a65738c0",
         "type": "github"
       },
       "original": {
@@ -675,11 +675,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1777550343,
-        "narHash": "sha256-onTHP/FGrF8nDn9EWRBxyBIUm7svUI/8rr1Dz0Wm1bE=",
+        "lastModified": 1777585694,
+        "narHash": "sha256-aQQiIZUWcSp3MR/ItkxHnv8GCMZZg2jPh1IW/bXeF/E=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "8884b9e6ce608a22c993b1a871e864171626e8e5",
+        "rev": "a45de66d22d696cd4e60444176641d59bc65db6c",
         "type": "github"
       },
       "original": {
@@ -1357,11 +1357,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777549335,
-        "narHash": "sha256-rVdBed00E9b7lazP53uRWpHhPJhk9xt8c6a5CaF0cSA=",
+        "lastModified": 1777593438,
+        "narHash": "sha256-vgsXQyVCsvA2xJYbiPI6HsK8ceqSvq8YC1wx/d+jqMo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "d1f5143ceae41a5950a5072aac5e0d57e6219220",
+        "rev": "f981a8f70eae02eee92e0f284698edc65f115946",
         "type": "github"
       },
       "original": {

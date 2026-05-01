@@ -11,6 +11,7 @@
       redlib
       rimgo
       containers
+      systemd-resolved
     ];
   };
 

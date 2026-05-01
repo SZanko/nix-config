@@ -15,6 +15,8 @@
       ];
       extraConfig = "MulticastDNS=yes";
     };
+
+    networking.networkmanager.dns = "systemd-resolved";
   };
 }
 

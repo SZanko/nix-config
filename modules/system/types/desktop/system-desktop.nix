@@ -18,6 +18,7 @@
       plymouth
       antivirus
       secureboot
+      systemd-resolved-nextdns
     ];
 
     environment.systemPackages = with pkgs; [

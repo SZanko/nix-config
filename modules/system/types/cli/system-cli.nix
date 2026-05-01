@@ -8,7 +8,6 @@
     imports = with inputs.self.modules.nixos; [
       nix-modules-setup
       cli-tools
-      systemd-resolved
       graphics
       security
       zsh
