@@ -4,7 +4,7 @@
 {
   # expansion of nix-modules-setup system with cli-tools
 
-  flake.modules.nixos.system-cli = {
+  flake.modules.nixos.system-cli = { pkgs, lib, ... }: {
     imports = with inputs.self.modules.nixos; [
       nix-modules-setup
       cli-tools
@@ -13,6 +13,11 @@
       zsh
       nixstore-garbage-collection
     ];
+
+    boot.kernelPackages = lib.mkIf (lib.versionOlder pkgs.linux.version "6.18.22") (
+      lib.mkDefault pkgs.linuxPackages_6_18
+    );
+
   };
 
   flake.modules.darwin.system-cli = {
