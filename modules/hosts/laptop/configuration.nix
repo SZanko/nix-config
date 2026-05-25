@@ -9,7 +9,7 @@
       bluetooth
       multimedia
       german
-      neo4j-dev
+      #neo4j-dev
 #spark-dev
     ];
 
