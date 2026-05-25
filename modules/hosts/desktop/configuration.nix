@@ -12,10 +12,11 @@
       multimedia
       redlib
       ipfs
-      neo4j-dev
+      #neo4j-dev
       german
       phantom-service
       #radicle
+      esp-idf
     ];
 
     # Enable networking
