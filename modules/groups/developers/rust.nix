@@ -16,6 +16,11 @@
       pkgs.unstable.probe-rs-tools
     ];
 
+    nixpkgs.config.permittedInsecurePackages = [
+      "python3.13-ecdsa-0.19.2" # esptool
+    ];
+
+
 
     environment.systemPackages = with pkgs; [
       rustup

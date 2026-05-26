@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.nvidia-closed = {inputs, pkgs, ...}: {
+  flake.modules.nixos.nvidia-closed = {inputs, pkgs, config, ...}: {
     services = {
       xserver = {
         videoDrivers = ["nvidia"];
@@ -34,6 +34,9 @@
       };
 
       nvidia = {
+
+        # Support gtx 1080
+        package = config.boot.kernelPackages.nvidiaPackages.legacy_580; 
 
         # Modesetting is required.
         modesetting.enable = true;

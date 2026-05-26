@@ -5,6 +5,10 @@
     esp-dev = inputs.nixpkgs-esp-dev.packages.${pkgs.stdenv.hostPlatform.system};
   in
   {
+    nixpkgs.config.permittedInsecurePackages = [
+      "python3.13-ecdsa-0.19.2"
+    ];
+
     environment.systemPackages = with pkgs; [
       esp-dev.esp-idf-full
       esptool
