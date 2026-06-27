@@ -1,5 +1,6 @@
 {
   flake.modules.nixos.fonts = { pkgs, ... }: {
+    fonts.fontDir.enable = true;
     fonts.packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
@@ -10,6 +11,7 @@
       mplus-outline-fonts.githubRelease
       dina-font
       proggyfonts
+      font-misc-misc
     ]
       ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   };

@@ -19,6 +19,7 @@
       antivirus
       secureboot
       systemd-resolved-nextdns
+      opensnitch
     ];
 
     environment.systemPackages = with pkgs; [
