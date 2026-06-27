@@ -2,7 +2,7 @@
 , ...
 }:
 {
-  flake.modules.nixos.gnome = { pkgs, ...}: {
+  flake.modules.nixos.gnome = { pkgs, lib, ...}: {
     #home-manager.sharedModules = [
     #  inputs.self.modules.homeManager.gnome
     #];
@@ -21,6 +21,36 @@
           variant = "";
         };
       };
+
+      opensnitch.rules = {
+        gjs = {
+          created= "2026-06-27T18=40=29.000000Z";
+          name= "gnome-js";
+          enabled= true;
+          action= "allow";
+          duration= "always";
+          operator= {
+            type= "simple";
+            sensitive = false;
+            operand= "process.path";
+            data= "${lib.getBin pkgs.gjs}/bin/gjs-console";
+          };
+        };
+
+        gnome-software = {
+          created= "2026-06-27T18=40=59.000000Z";
+          name= "gnome-software";
+          enabled= true;
+          action= "allow";
+          duration= "always";
+          operator= {
+            type= "simple";
+            operand= "process.path";
+            data= "${lib.getBin pkgs.gnome-software}/bin/.gnome-software-wrapped";
+          };
+        };
+      };
+
     };
 
 
