@@ -2,13 +2,15 @@
 , ...
 }:
 {
-  flake.modules.nixos.laptop = {
+  flake.modules.nixos.laptop = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       system-desktop
       systemd-boot
+      systemd-resolved
       bluetooth
       multimedia
       german
+      logitech
       #neo4j-dev
 #spark-dev
     ];
@@ -20,7 +22,7 @@
       #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     };
 
-    time.timeZone = "Europe/Lisbon";
+    time.timeZone = "Europe/Vienna";
 
     environment = {
       etc = {
@@ -31,6 +33,10 @@
       sessionVariables = {
         QT_QPA_PLATFORM = "wayland";
       };
+
+      systemPackages = with pkgs; [
+        jetbrains.pycharm
+      ];
     };
 
     boot.kernelParams = [

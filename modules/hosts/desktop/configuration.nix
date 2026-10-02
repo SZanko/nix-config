@@ -6,6 +6,7 @@
     imports = with inputs.self.modules.nixos; [
       system-desktop
       systemd-boot
+      systemd-resolved-nextdns
       bluetooth
       nvidia-closed
       gaming

@@ -18,13 +18,14 @@
       plymouth
       antivirus
       secureboot
-      systemd-resolved-nextdns
+      
       opensnitch
     ];
 
     environment.systemPackages = with pkgs; [
       wl-clipboard
       comma
+      dig
     ];
 
     zramSwap = {

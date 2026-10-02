@@ -16,6 +16,8 @@
         "org.zotero.Zotero"
 
         "io.github.linx_systems.ClamUI"
+
+        "net.ankiweb.Anki"
       ];
     };
   };

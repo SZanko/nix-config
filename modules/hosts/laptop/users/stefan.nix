@@ -10,6 +10,15 @@
       arduino
     ];
 
+
+    services = {
+      flatpak = {
+        packages = [
+          "io.github.spacingbat3.webcord"
+        ];
+      };
+    };
+
     #home-manager.users.stefan = {
     #  ###
     #};
