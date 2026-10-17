@@ -27,7 +27,7 @@
       hostName = "stefan-pc"; # Define your hostname.
     };
 
-    time.timeZone = "Europe/Lisbon";
+    time.timeZone = "Europe/Stockholm";
 
 
     environment = {
@@ -42,7 +42,8 @@
 
       systemPackages =  [
         pkgs.nur.repos.szanko.samloader
-        pkgs.unstable.snx-rs
+        #pkgs.unstable.snx-rs
+        pkgs.unstable.nixpkgs-review
       ];
     };
 
