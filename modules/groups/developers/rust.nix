@@ -36,6 +36,8 @@
       unstable.probe-rs-tools
       gcc
       clang
+      ninja
+      cmake
       jetbrains.rust-rover
       slint-lsp
       slint-viewer

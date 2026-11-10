@@ -18,7 +18,8 @@
       phantom-service
       #radicle
       esp-idf
-      logitech
+      #logitech
+      
     ];
 
     # Enable networking

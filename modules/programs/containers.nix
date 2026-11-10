@@ -24,6 +24,7 @@
     };
 
     environment.systemPackages = [ 
+      pkgs.unstable.distrobox
       pkgs.unstable.helmfile-wrapped
       pkgs.unstable.kubectl
       (pkgs.unstable.wrapHelm pkgs.unstable.kubernetes-helm {

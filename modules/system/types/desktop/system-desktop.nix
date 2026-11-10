@@ -18,6 +18,7 @@
       plymouth
       antivirus
       secureboot
+      nix-alien
       
       opensnitch
     ];

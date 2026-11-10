@@ -2,6 +2,16 @@
   flake.modules.nixos.android = { inputs, pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       android-tools
+      unstable.flutter
+      unstable.android-studio
+    ];
+
+    nixpkgs.config = {
+      android_sdk.accept_license = true;
+    };
+
+    systemd.tmpfiles.rules = [
+      "L+ /opt/flutter - - - - ${pkgs.flutter}"
     ];
 
     services = {
@@ -10,6 +20,15 @@
 
         packages = [
           "com.google.AndroidStudio"
+          "runtime/org.freedesktop.Sdk.Extension.llvm22/x86_64/26.08"
+          "runtime/org.freedesktop.Sdk.Extension.openjdk25/x86_64/26.08"
+          "runtime/org.freedesktop.Sdk.Extension.openjdk21/x86_64/26.08"
+          "runtime/org.freedesktop.Sdk.Extension.openjdk17/x86_64/26.08"
+          "runtime/org.freedesktop.Sdk.Extension.openjdk11/x86_64/26.08"
+          "runtime/org.freedesktop.Sdk.Extension.openjdk8/x86_64/26.08"
+          "runtime/org.freedesktop.Sdk.Extension.node24/x86_64/26.08"
+
+          "runtime/org.freedesktop.Sdk.Extension.node24/x86_64/25.08"
           "runtime/org.freedesktop.Sdk.Extension.openjdk25/x86_64/25.08"
           "runtime/org.freedesktop.Sdk.Extension.openjdk21/x86_64/25.08"
           "runtime/org.freedesktop.Sdk.Extension.openjdk17/x86_64/25.08"
