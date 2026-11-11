@@ -11,7 +11,7 @@
         system-barebones
         #home-manager
         #impermanence
-        #secrets
+        secrets
         #sops-nix
         firmware
         nur
