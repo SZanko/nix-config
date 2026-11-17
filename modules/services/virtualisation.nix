@@ -29,9 +29,16 @@
       #  "org.gnome.Boxes"
       #];
     };
+    
+    programs = {
+      virt-manager = {
+        enable = true;
+      };
+    };
+
     environment.systemPackages = with pkgs; [
       #gnome-boxes #piece of shit software guest agents doesn't fucking work
-      virt-manager
+      #virt-manager
     ];
   };
 }

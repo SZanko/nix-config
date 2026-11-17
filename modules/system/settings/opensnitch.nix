@@ -25,7 +25,7 @@
           };
         };
 
-        firefox = {
+        firefox-flatpak = {
           created="2026-06-27T18:40:12.000000Z";
           name= "firefox-flatpak";
           enabled =  true;
@@ -36,6 +36,20 @@
             sensitive = false;
             operand = "process.path";
             data = "/app/lib/firefox/firefox-bin";
+          };
+        };
+
+        firefox = {
+          created="2026-11-12T00:06:18.000000Z";
+          name= "firefox";
+          enabled =  true;
+          action = "allow";
+          duration = "always";
+          operator = {
+            type = "simple";
+            sensitive = false;
+            operand = "process.path";
+            data = "${lib.getBin pkgs.unstable.firefox}/lib/firefox/firefox";
           };
         };
 

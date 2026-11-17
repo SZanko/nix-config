@@ -11,6 +11,7 @@
           fribidi
           libx11
           fontconfig
+          fuse
         ];
       };
     };

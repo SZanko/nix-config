@@ -8,6 +8,7 @@
       stefan
       guest
       dotnet-dev
+      python
       pentester
       arduino
       android

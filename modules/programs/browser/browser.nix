@@ -3,11 +3,22 @@
 }:
 {
   flake.modules.nixos.browser = { pkgs, ... }: {
-    environment.systemPackages = with pkgs.unstable; [
-      firefox
-      #brave
-      chromium
-    ];
+
+    programs = {
+      firefox = {
+        enable = true;
+        languagePacks = [
+          "en-GB"
+          "de"
+          "sv-SE"
+        ];
+      };
+
+      chromium = {
+        enable = true;
+      };
+    };
+
 
     services.flatpak = {
       packages = [

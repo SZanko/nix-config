@@ -18,17 +18,33 @@ let
         ripgrep-all
         ripgrep
         yazi
-        direnv
         pulsemixer
-        unstable.neovim
         difftastic
         bat
       ];
 
       programs = {
+        neovim = {
+          enable = true;
+          #package = pkgs.unstable.neovim;
+          defaultEditor = true;
+          viAlias = true;
+          vimAlias = true;
+          withPython3 = true;
+          withNodeJs = true;
+        };
+
         direnv = {
           enable = true;
           enableZshIntegration = true;
+          enableBashIntegration = true;
+          enableFishIntegration = true;
+          angrr = {
+            enable = true;
+          };
+          nix-direnv = {
+            enable = true;
+          };
         };
 
         git = {

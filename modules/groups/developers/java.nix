@@ -26,13 +26,13 @@
           "com.jetbrains.IntelliJ-IDEA-Ultimate"
 
           # runtime 25.08
-          "runtime/org.freedesktop.Sdk.Extension.openjdk25/x86_64/25.08"
-          "runtime/org.freedesktop.Sdk.Extension.openjdk21/x86_64/25.08"
-          "runtime/org.freedesktop.Sdk.Extension.openjdk17/x86_64/25.08"
-          "runtime/org.freedesktop.Sdk.Extension.openjdk11/x86_64/25.08"
-          "runtime/org.freedesktop.Sdk.Extension.openjdk8/x86_64/25.08"
+          #"runtime/org.freedesktop.Sdk.Extension.openjdk25/x86_64/25.08"
+          #"runtime/org.freedesktop.Sdk.Extension.openjdk21/x86_64/25.08"
+          #"runtime/org.freedesktop.Sdk.Extension.openjdk17/x86_64/25.08"
+          #"runtime/org.freedesktop.Sdk.Extension.openjdk11/x86_64/25.08"
+          #"runtime/org.freedesktop.Sdk.Extension.openjdk8/x86_64/25.08"
 
-          "runtime/org.freedesktop.Sdk.Extension.node24/x86_64/25.08"
+          #"runtime/org.freedesktop.Sdk.Extension.node24/x86_64/25.08"
 
           "runtime/org.freedesktop.Sdk.Extension.openjdk25/x86_64/26.08"
           "runtime/org.freedesktop.Sdk.Extension.openjdk21/x86_64/26.08"

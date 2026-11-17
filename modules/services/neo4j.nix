@@ -11,7 +11,7 @@
     };
 
     environment.systemPackages = with pkgs; [
-      neo4j-desktop
+      #neo4j-desktop
     ];
   };
 }
